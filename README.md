@@ -5,7 +5,7 @@ Language-based colorization requires the colorized image to be consistent with t
 
 
  <img src="teaser.png" align=center />
- 
+
 
 ## Prerequisites
 * Python 3.6
@@ -41,7 +41,7 @@ Licensed under a [Creative Commons Attribution-NonCommercial 4.0 International](
 Except where otherwise noted, this content is published under a [CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0/) license, which means that you can copy, remix, transform and build upon the content as long as you do not use the material for commercial purposes and give appropriate credit and provide a link to the license.
 
 ## Citation
-If you use this code for your research, please cite our papers [CT<sup>2</sup>: Colorization Transformer via Color Tokens](https://ci.idm.pku.edu.cn/Weng_ECCV22g.pdf)
+If you use this code for your research, please cite our papers [L-CoDer: Language-based Colorization with Color-object Decoupling Transformer](https://ci.idm.pku.edu.cn/Weng_ECCV22g.pdf)
 ```
 @InProceedings{lcoder,
   author = {Chang, Zheng and Weng, Shuchen and Li, Yu and Li, Si and Shi, Boxin},
