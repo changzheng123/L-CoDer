@@ -35,7 +35,6 @@ We process the [MSCOCO](https://cocodataset.org/) dataset for evaluation. Specif
 Download pre-trained models [here](https://drive.google.com/file/d/1xA-4hzY-zBxtxywVw_9y2u17ExenRVju/view?usp=drive_link), and run:
 ```
   python run_colorization.py --model  colorization_vit_large_patch16_224_fusion_whole_up --data_path <your data path> --finetune checkpoint/largedecoder-checkpoint.pth --batch_size 2 --eval --output_dir output/test
-
 ```
 
 ## License
