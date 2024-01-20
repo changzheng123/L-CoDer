@@ -772,9 +772,9 @@ class Biaffine(nn.Module):
 class Bert_encoder(nn.Module):
     def __init__(self,decoder_emb):
         super().__init__()
-        model_name = 'bert-base-uncased'
+        model_name = '/data2/cz2021/bert-base-uncased/' # if you have local ckpt
+        # model_name = 'bert-base-uncased' # if you want to download from hugging face
         self.tokenizer = BertTokenizer.from_pretrained(model_name)
-        model_name = 'bert-base-uncased'
         model_config = BertConfig.from_pretrained(model_name)
         # 修改配置
         model_config.output_hidden_states = True

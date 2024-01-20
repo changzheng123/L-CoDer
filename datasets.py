@@ -37,7 +37,7 @@ class TextDataset(torch.utils.data.Dataset):
             parser_path = os.path.join(caption_dir,'obj2col.json')
             self.parser_file = json.load(open(parser_path,'r'))
         elif split == 'val':
-            caption_path = None    
+            caption_path = os.path.join(caption_dir,'selected_val.json')    
             self.transform = transforms.Compose([
                 transforms.Resize((224, 224)),
                 transforms.ToTensor()])
@@ -77,7 +77,7 @@ class TextDataset(torch.utils.data.Dataset):
         key = self.keys[index]
         img = self.get_img(key)
         cap,cap_idx = self.get_caption(key)
-        if self.split == 'test':
+        if self.split == 'test' or self.split == 'val':
             parser_mat = torch.zeros((MAX_CAP_LEN,MAX_CAP_LEN))
         else:
             parser_mat = self.get_parser(key,cap_idx)

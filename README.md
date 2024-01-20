@@ -26,13 +26,16 @@ Install other python requirements
 pip install -r requirement.txt
 ```
 
+## Extended COCO-Stuff Dataset
 
-## Datasets
 We process the [MSCOCO](https://cocodataset.org/) dataset for evaluation. Specifically, we keep the images whose captions contain adjectives and annotate the correspondence between adjectives and nouns in the caption to produce the ground-truth object-color corresponding matrix (OCCM). Metadata is in ``./resources``.
 
 ## Testing with pretrained model
+
+Download pre-trained models [here](https://drive.google.com/file/d/1xA-4hzY-zBxtxywVw_9y2u17ExenRVju/view?usp=drive_link), and run:
 ```
-    python run_colorization.py --model  colorization_vit_large_patch16_224_fusion_whole_up --data_path <your data path> --finetune output/colorization_whole_up_largeDecoder/checkpoint-best.pth --batch_size 2 --eval --test --output_dir output/test_choose
+  python run_colorization.py --model  colorization_vit_large_patch16_224_fusion_whole_up --data_path <your data path> --finetune checkpoint/largedecoder-checkpoint.pth --batch_size 2 --eval --output_dir output/test
+
 ```
 
 ## License

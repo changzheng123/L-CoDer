@@ -25,6 +25,7 @@ from optim_factory import create_optimizer, get_parameter_groups, LayerDecayValu
 
 from datasets import TextDataset
 from engine_for_colorization import train_one_epoch, evaluate
+import modeling_colorization
 from utils import NativeScalerWithGradNormCount as NativeScaler
 import utils
 

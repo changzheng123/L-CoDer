@@ -240,11 +240,5 @@ def evaluate(data_loader, model, device, epoch=10000,patch_size=16,save_img_dir=
         metric_logger.update(lpips=lpips_score)
     
     metric_logger.synchronize_between_processes()
-    print('* psnr {losses.global_avg:.8f}'
-          .format(losses=metric_logger.psnr))
-    print('* ssim {losses.global_avg:.8f}'
-          .format(losses=metric_logger.ssim))
-    print('* lpips {losses.global_avg:.8f}'
-          .format(losses=metric_logger.lpips))
 
     return {k: meter.global_avg for k, meter in metric_logger.meters.items()}
